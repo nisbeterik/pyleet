@@ -37,14 +37,14 @@ class Solution:
                         
                         column_dict[i].add(board[j][i])
                         row_temp.add(board[j][i])
-                        sub_box_key = (j//3) + (i//3) * 3
+                        sub_box_key = (j//3) * 3 + (i//3)
                          
                         if board[j][i] in box_dict[sub_box_key]:
                            
                             return False
                         else:
                             box_dict[sub_box_key].add(board[j][i])
-        return True   
+        return True 
                         
 
                 
